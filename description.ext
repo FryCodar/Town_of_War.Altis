@@ -1,0 +1,21 @@
+onLoadName = "Town of War";
+author = "MSOT-Fry";
+OnLoadMission = "a MSOT Produktion";
+// loadScreen =  "pic\Titel.paa";
+
+
+
+class Header
+{
+ gameType = COOP;
+ minPlayers = 1;
+ maxPlayers = 8;
+};
+
+
+respawn = 3;
+respawndelay = 5;
+disabledAI = 1;
+
+
+#include "config_all.hpp"
