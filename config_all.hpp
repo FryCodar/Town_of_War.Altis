@@ -68,6 +68,7 @@ class CfgFunctions
 		#include "functions\briefing\cfgFunctions.hpp"
 		#include "functions\curator\cfgFunctions.hpp"
 		#include "functions\dlg\cfgFunctions.hpp"
+		#include "functions\acm\cfgFunctions.hpp"
 };
 
 class CfgRemoteExec
