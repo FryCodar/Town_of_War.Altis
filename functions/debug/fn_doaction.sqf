@@ -23,13 +23,15 @@ params ["_obj","_caller","_idx","_xtra"];
             hint "Script 1 begins";
             //_____________________________________________________________________________________________________________________________
            //  _modules = [Car1,true] call MSOT_creating_fnc_setFSeffect;
-           
+           //_datas = [(missionNamespace getVariable [STRVAR_DO(acm_main_pos),[]]), 1000] call MSOT_acm_fnc_getPlayerZone;
+           _marker_name = [((missionNamespace getVariable [STRVAR_DO(acm_main_pos),[]]) select 0),"Tester","ELLIPSE",[1000,1000]] call MSOT_usage_fnc_setMapMarker;
+
           };
    case 3:{
             //ZWEITER TESTBEREICH
             hint "Script 2 begins";
             //______________________________________________________________________________________________________________________________
-
+            copyToClipboard str (position Tr1);
           };
    case 4:{
             If(captive player)then

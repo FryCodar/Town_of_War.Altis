@@ -194,6 +194,7 @@ If(_do_your_job)then
 
    }forEach _work_arr;
   };
-  If(count _grp_arr > 0)then{["GROUPS",_main_pos,_grp_arr] spawn MFUNC(system,addToSystem);};
+  private _save_group = missionNameSpace getVariable [STRVAR_DO(save_in_system),true];
+  If(count _grp_arr > 0 && _save_group)then{["GROUPS",_main_pos,_grp_arr] spawn MFUNC(system,addToSystem);};
 };
 _output

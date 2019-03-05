@@ -19,7 +19,7 @@ enableSentences false;
 //***************************************************************************************************************************************************
 If(isServer)then
 {
-  missionNamespace setVariable [STRVAR_DO(acm_main_pos),[3409.7,13313.2,0],true]; 
+  missionNamespace setVariable [STRVAR_DO(acm_main_pos),[[3600.75,13331.2,0],800],true];
   [[H2,H3,H4,H5,H6],120] call MFUNC(usage,addRespawnVecs);
   //[F1] call MFUNC(dlg,addArtilleryUnits);
   //missionNameSpace setVariable [STRVAR_DO(available_artillery),true,true];

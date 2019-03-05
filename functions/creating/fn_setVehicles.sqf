@@ -163,12 +163,13 @@ If(count _types_arr > 0)then
           };
         };
       };
-      If(count _grp_store > 0)then{["GROUPS",_main_pos,_grp_store] spawn MFUNC(system,addToSystem);};
-      If(count _vec_store > 0)then{
-                                    _output = _vec_store;
-                                    ["VEHICLES",_main_pos,_vec_store] spawn MFUNC(system,addToSystem);
-                                    If(_type isEqualTo "ARTY")then{["ARTILLERY",_main_pos,_vec_store] spawn MFUNC(system,addToSystem);};
-                                  };
+      _output = _vec_store;
+      private _save_vecs = missionNameSpace getVariable [STRVAR_DO(save_in_system),true];
+      If(count _grp_store > 0 && _save_vecs)then{["GROUPS",_main_pos,_grp_store] spawn MFUNC(system,addToSystem);};
+      If(count _vec_store > 0 && _save_vecs)then{
+                                                 ["VEHICLES",_main_pos,_vec_store] spawn MFUNC(system,addToSystem);
+                                                 If(_type isEqualTo "ARTY")then{["ARTILLERY",_main_pos,_vec_store] spawn MFUNC(system,addToSystem);};
+                                                };
     };
 }else{LOG_ERR("NO VEHICLE CLASSES FOUND: CHECK MSOT_creating_fnc_setUnits");};
 _output

@@ -20,7 +20,21 @@
           4 - Was soll nach Beendigung aller Maintargets passieren (STRING ist STATE -"SUCCESS"/"FAILED")
           5 - Nachbereitung der Mission (TriggerName-löschen veranlassen - ["MAINTRIGGER",TRIGGERNAME,INDEX])
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+          Artiller ein und aus schalten (geht nur wenn Artilleryeinheiten dem System hinzugefügt wurden):
+
+          missionNameSpace setVariable [STRVAR_DO(available_artillery),true,true]; //AN
+          missionNameSpace setVariable [STRVAR_DO(available_artillery),false,true]; // AUS
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          Anschalten des Speicherns von Einheiten im System, um Sie später löschen zu können:
+
+          missionNameSpace setVariable [STRVAR_DO(save_in_system),true,true]; //AN
+          missionNameSpace setVariable [STRVAR_DO(save_in_system),false,true]; //AUS
+
+
+//____________________________________________________________________________________________________________________________________________________________________________________________
 
           // random radius
 private _position = _origin getPos [random _radius, random 360];
@@ -39,20 +53,3 @@ private _position = _origin getPos [_radius * sqrt (1 - abs random [- 1, 0, 1]),
 
 // random area, ring
 private _position = _origin getPos [sqrt (_innerRadius^2 + random (_radius^2 - _innerRadius^2)), random 360];
-
-
-this addEventHandler ["HandleDamage",{
-    params ["_car","_hitPart","_damage"];
-    if(_hitPart In ["glass1","glass2","glass3","glass4","glass5","glass6","sklo predni P","sklo predni L","wheel_1_1_steering","wheel_1_2_steering","wheel_1_3_steering","wheel_1_4_steering","wheel_2_1_steering","wheel_2_2_steering","wheel_2_3_steering","wheel_2_4_steering"])then{_car setHit[_hitPart,0,false];};
-}];
-this addEventHandler ["HandleDamage",{hint str _this;}];
-
-
-name = "wheel_1_1_steering";
-name = "wheel_1_2_steering";
-name = "wheel_1_3_steering";
-name = "wheel_1_4_steering";
-name = "wheel_2_4_steering";
-name = "wheel_2_2_steering";
-name = "wheel_2_1_steering";
-name = "wheel_2_3_steering";

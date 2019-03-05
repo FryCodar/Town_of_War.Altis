@@ -74,10 +74,9 @@ If(count _type > 0)then
    };
    if(_air_num > 1)then{sleep 10;};
   };
-  If(count _grp_arr > 0)then{["GROUPS",_main_pos,_grp_arr] spawn MFUNC(system,addToSystem);};
-  If(count _vec_arr > 0)then{
-                                _output = _vec_arr;
-                                ["VEHICLES",_main_pos,_vec_arr] spawn MFUNC(system,addToSystem);
-                            };
+  _output = _vec_arr;
+  private _save_it = missionNameSpace getVariable [STRVAR_DO(save_in_system),true];
+  If(count _grp_arr > 0 && _save_it)then{["GROUPS",_main_pos,_grp_arr] spawn MFUNC(system,addToSystem);};
+  If(count _vec_arr > 0 && _save_it)then{["VEHICLES",_main_pos,_vec_arr] spawn MFUNC(system,addToSystem);};
 }else{LOG_ERR("NO AIR VEHICLE CLASSES FOUND: CHECK MSOT_creating_fnc_setAirForce");};
 _output

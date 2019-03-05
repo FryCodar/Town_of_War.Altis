@@ -134,6 +134,7 @@ If(count _street_pos > 0)then
           case (((driver _first_vec) call BFUNC(enemyDetected))):{_convoy_attacked = true;};
           case (!alive (driver _first_vec)):{_convoy_attacked = true;};
         };
+        private _save_con_system = missionNameSpace getVariable [STRVAR_DO(save_in_system),true];
         If(_convoy_attacked)then
         {
           while{(count (waypoints _m_group)) > 0}do{deleteWaypoint ((waypoints _m_group) select 0);sleep 0.04;};
@@ -196,21 +197,30 @@ If(count _street_pos > 0)then
           {
              If((toUpper (_m_behaviour)) isEqualTo "PATROL")then
              {
-               ["GROUPS",_m_pos,_all_grps_arr] call MFUNC(system,addToSystem);
-               ["VEHICLES",_m_pos,_all_vecs_arr] call MFUNC(system,addToSystem);
+               If(_save_con_system)then
+               {
+                 ["GROUPS",_m_pos,_all_grps_arr] call MFUNC(system,addToSystem);
+                 ["VEHICLES",_m_pos,_all_vecs_arr] call MFUNC(system,addToSystem);
+               };
              }else{
+                   If(_save_con_system)then
+                   {
                     ["GROUPS",_attackPos,_all_grps_arr] call MFUNC(system,addToSystem);
                     ["VEHICLES",_attackPos,_all_vecs_arr] call MFUNC(system,addToSystem);
                     _script = {[(_this select 1)] call MFUNC(system,delFromSystem);};
                     _triggername = ["LEAVE",_attackPos,(_m_radius + 100)] call MFUNC(system,setTrigger);
                     ["MAINTRIGGER",_attackPos,[_triggername,_script,0,true]] call MFUNC(system,addMissionInfos);
+                   };
                   };
           }else{
+                If(_save_con_system)then
+                {
                  ["GROUPS",_attackPos,_all_grps_arr] call MFUNC(system,addToSystem);
                  ["VEHICLES",_attackPos,_all_vecs_arr] call MFUNC(system,addToSystem);
                  _script = {[(_this select 1)] call MFUNC(system,delFromSystem);};
                  _triggername = ["LEAVE",_attackPos,(_m_radius + 200)] call MFUNC(system,setTrigger);
                  ["MAINTRIGGER",_attackPos,[_triggername,_script,0,true]] call MFUNC(system,addMissionInfos);
+                };
                };
 
         }else{
@@ -244,12 +254,14 @@ If(count _street_pos > 0)then
                       ARR_ADDVAR(_all_grps_arr,_m_grp);
                     };
                   }forEach _m_vecs;
-                  ["GROUPS",_m_pos,_all_grps_arr] call MFUNC(system,addToSystem);
-                  ["VEHICLES",_m_pos,_all_vecs_arr] call MFUNC(system,addToSystem);
-                  _script = {[(_this select 1)] call MFUNC(system,setTargetBehavior);};
-                  _triggername = ["DETECTED",_m_pos,_m_radius] call MFUNC(system,setTrigger);
-                  ["MAINTRIGGER",_m_pos,[_triggername,_script,0,false]] call MFUNC(system,addMissionInfos);
-
+                  If(_save_con_system)then
+                  {
+                    ["GROUPS",_m_pos,_all_grps_arr] call MFUNC(system,addToSystem);
+                    ["VEHICLES",_m_pos,_all_vecs_arr] call MFUNC(system,addToSystem);
+                    _script = {[(_this select 1)] call MFUNC(system,setTargetBehavior);};
+                    _triggername = ["DETECTED",_m_pos,_m_radius] call MFUNC(system,setTrigger);
+                    ["MAINTRIGGER",_m_pos,[_triggername,_script,0,false]] call MFUNC(system,addMissionInfos);
+                  };
                 }else{
                        {deleteVehicle _x;}forEach units _m_group;
                        {

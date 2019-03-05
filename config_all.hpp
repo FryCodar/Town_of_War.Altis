@@ -71,6 +71,22 @@ class CfgFunctions
 		#include "functions\acm\cfgFunctions.hpp"
 };
 
+
+class CfgSounds
+{
+	sounds[] = {};
+
+	class GenSound
+	{
+		name = "GenSound";
+		sound[] = {"sounds\electric.ogg", 1, 1};
+		titles[] = {};
+	};
+};
+
+
+
+
 class CfgRemoteExec
 {
 			class Commands
