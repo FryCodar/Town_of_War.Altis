@@ -18,5 +18,8 @@ Author: Fry
 If(count allCurators > 0)then
 {
   diag_log "CURATOR_EVENT: START EVENTHANDLER ATTACHING";
-  {_x addEventHandler ["CuratorGroupPlaced",{REMOTE_TRIEXESM(_this,curator,setGroupAttribute,0);}];}forEach allCurators;
+  {
+    _x addEventHandler ["CuratorGroupPlaced",{REMOTE_TRIEXESM(_this,curator,setGroupAttribute,0);}];
+    _x addEventHandler ["CuratorObjectPlaced",{REMOTE_TRIEXESM(_this,curator,setObjectAttribute,0);}];
+  }forEach allCurators;
 };

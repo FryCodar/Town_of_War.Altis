@@ -11,5 +11,8 @@ class TAGADD
 		 class setGroupAttribute {
 			 												 description = "Set attributes to selected Group";
 		 												 };
+		 class setObjectAttribute {
+			 													description = "Set attributes to selected Object";
+		 													};
 	 };
 	};
