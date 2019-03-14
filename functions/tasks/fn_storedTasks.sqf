@@ -12,11 +12,11 @@ switch(_idx)do
   case 0:{
             _task_name = "TASK1";
 
-            _task_description_long = "Hello";
+            _task_description_long = (localize "STR_task_Linfo1");
 
-            _task_description_forHUD = "ich da";
+            _task_description_forHUD = (localize "STR_task_Sinfo1");
 
-            _task_Type  = "move";
+            _task_Type  = "destroy";
 
          };
    case 1:{

@@ -21,6 +21,7 @@ If(isServer)then
 {
   missionNamespace setVariable [STRVAR_DO(acm_main_pos),[[3600.75,13331.2,0],800],true];
   [[H2,H3,H4,H5,H6],120] call MFUNC(usage,addRespawnVecs);
+  [0] execVM "missions\mission1.sqf";
   //[F1] call MFUNC(dlg,addArtilleryUnits);
   //missionNameSpace setVariable [STRVAR_DO(available_artillery),true,true];
   execVM "Engima\enigma_init.sqf";

@@ -22,7 +22,6 @@ _counter = 0;
 
 player addWeapon "Rangefinder";
 player addAction["Get Class", {call MSOT_debug_fnc_getlookedclass}];
-
 player allowDamage false;
 
 hint "DEBUG-MODE";

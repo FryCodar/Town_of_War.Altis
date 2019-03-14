@@ -74,16 +74,35 @@ switch(_obj_idx)do
                               ["O_HMG_01_A_F",[0.722656,-4.44336,-0.0749998],175.006,1,0,[0,-0],"","",true,false],
                               ["Land_TTowerBig_2_F",[0.458984,-0.560547,0],0,1,0,[0,0],"","",true,false]
                             ];
-            _spec_object = ["Land_TTowerBig_2_F"];              
+            _spec_object = ["Land_TTowerBig_2_F"];
           };
    case 2:{
 
              _objects_list = [
+                               ["O_supplyCrate_F",[-0.111328,0.546875,0],0,1,0,[0,0],"","",true,false],
+                               ["CamoNet_ghex_F",[0.244141,0.705078,0],0,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Long_F",[1.16016,-3.82031,-0.000999928],0,1,0,[0,0],"","",true,false],
+                               ["Land_SandbagBarricade_01_F",[-1.39844,-4.17383,0],181.523,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Long_F",[1.1875,4.71484,-0.000999928],2.66087,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Long_F",[-1.71484,4.88477,-0.000999928],2.66087,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Short_F",[3.42969,-3.85938,-0.0010004],0,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Long_F",[4.08398,4.57031,-0.000999928],2.66087,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Short_F",[-4.03516,4.92188,-0.0010004],0,1,0,[0,0],"","",true,false],
+                               ["Land_SandbagBarricade_01_F",[5.03906,-4.0918,0],180.143,1,0,[0,0],"","",true,false],
+                               ["Land_SandbagBarricade_01_F",[-5.34766,-4.0625,0],182.741,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Long_F",[-3.38477,-6.17188,-0.000999928],0,1,0,[0,0],"","",true,false],
+                               ["Land_SandbagBarricade_01_F",[-5.8418,4.14258,0],309.513,1,0,[0,0],"","",true,false],
+                               ["Land_SandbagBarricade_01_F",[6.52148,3.94922,0],39.5993,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Round_F",[-7.53711,2.50977,-0.00130081],121.901,1,0,[0,-0],"","",true,false],
+                               ["Land_BagFence_Long_F",[-7.76758,-0.130859,-0.000999928],270.812,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Round_F",[-7.50781,-2.96484,-0.00130081],50.4923,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Round_F",[7.37305,-3.29688,-0.00130081],314.676,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Long_F",[8.01563,-0.566406,-0.000999928],278.781,1,0,[0,0],"","",true,false],
+                               ["Land_BagFence_Round_F",[8.13867,2.30078,-0.00130081],236.964,1,0,[0,0],"","",true,false]
+                             ];
 
-                            ];
 
-
-               _spec_object = [];
+               _spec_object = ["O_supplyCrate_F"];
           };
    case 3:{
 

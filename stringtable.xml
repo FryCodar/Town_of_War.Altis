@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project name="MSOT_Lang_Table">
+    <Package name="main">
+    <Key ID="STR_task_Linfo1">
+			<Original>Versuchen Sie unbemerkt das Versorgungskraftwerk in der Nähe von Kavala zu erreichen! Dort befinden sich Generatoren, die die Stadt mit Strom versorgen! Schalten Sie die Generatoren aus, um Ihnen den Zugang zur Stadt zu erleichtern.</Original>
+			<German>Versuchen Sie unbemerkt das Versorgungskraftwerk in der Nähe von Kavala zu erreichen! Dort befinden sich Generatoren, die die Stadt mit Strom versorgen! Schalten Sie die Generatoren aus, um Ihnen den Zugang zur Stadt zu erleichtern.</German>
+		</Key>
+    <Key ID="STR_task_Sinfo1">
+			<Original>Schalten Sie die Stromversorgung ab!</Original>
+			<German>Schalten Sie die Stromversorgung ab!</German>
+		</Key>
+	</Package>
+</Project>
