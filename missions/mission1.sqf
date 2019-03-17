@@ -32,7 +32,7 @@ switch(_idx)do
               _force_calc = [([] call MFUNC(system,getPlayerCount)),([] call MFUNC(usage,checkNight))] call MFUNC(system,getForcesCalc);
               [(MSOT_MISSION1_POS select 0),(MSOT_MISSION1_POS select 1),(_force_calc select 0),(_force_calc select 1),"MIXED_ALL","MIXED"] call MFUNC(creating,setUnits);
               _script = {[(_this select 1)] call MFUNC(system,setTargetBehavior);sleep 1;};
-              _triggername = ["DETECTED",(MSOT_MISSION1_POS select 0),((MSOT_MISSION1_POS select 1) + 100)] call MFUNC(system,setTrigger);
+              _triggername = ["DETECTED",(MSOT_MISSION1_POS select 0),((MSOT_MISSION1_POS select 1) + 200)] call MFUNC(system,setTrigger);
               ["MAINTRIGGER",(MSOT_MISSION1_POS select 0),[_triggername,_script,0,false]] call MFUNC(system,addMissionInfos);
             };
               _script = {[[MSOT_GENERATORS,"GenSound",4,(MSOT_MISSION1_POS select 1)],"scripts\playSound.sqf"] remoteExec ["execVM",([0,-2] select isDedicated)];};
@@ -42,10 +42,20 @@ switch(_idx)do
 
          };
   case 2:{
+            [[[3239.96,14000,0],1500],"scripts\switchLights.sqf"] remoteExec ["execVM",0];
             [0,"SUCCEEDED"] call MFUNC(tasks,setTask);
-            [[3239.96,14000,0],1500] execVM "scripts\switchLights.sqf";
-            //[[MSOT_GENERATORS,"GenSound",4,(MSOT_MISSION1_POS select 1)],"scripts\playSound.sqf"] remoteExec ["execVM",([0,-2] select isDedicated)];
-            //private _tower_posses = [[3181.51,12906.7,0.00143886],[3280.93,13017.3,0.00149918],[3360.11,12957.4,0.00142574],[3101.03,13053.1,0.00151825],[3294.76,12958.1,0.00143147],[3253.7,13038.8,0.00171471],[3354.28,13010.6,0.00140762]];
+            {
+              private _lamp = "Land_PortableLight_double_F" createVehicle (_x # 0);
+              _lamp setDir (_x # 1);
+            }forEach [
+                      [[3170.83,13118.1,0.0659943],182.111],
+                      [[3193.66,13124.2,0.0605545],0],
+                      [[3180.03,13168.4,0.00737381],98.2844],
+                      [[3106.28,13177.2,0.000793457],252.834],
+                      [[3162.63,13188.6,0.00548553],3.2601],
+                      [[3071.54,13163.3,0.0460472],244.067]
+                     ];
+                     
          };
   case 3:{
 
