@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1026;
+		nextID=1028;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=84;
+		nextID=105;
 	};
 	class Camera
 	{
-		pos[]={350.29169,35.783966,30608.035};
-		dir[]={-0.66611898,-0.55971789,0.49300233};
-		up[]={-0.44990066,0.82867783,0.33297712};
-		aside[]={0.59491855,-2.9869261e-007,0.80382472};
+		pos[]={4329.7158,1349.5895,15282.327};
+		dir[]={-0.084260672,-0.058494516,0.99475265};
+		up[]={-0.0049386197,0.99828249,0.05830479};
+		aside[]={0.9964608,-1.5659316e-007,0.084405027};
 	};
 };
 binarizationWanted=0;
@@ -388,9 +388,9 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		windForced=1;
-		year=2035;
+		year=2019;
 		month=6;
-		day=24;
+		day=21;
 		hour=12;
 		minute=0;
 		startFogBase=-999.66669;
@@ -1714,7 +1714,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={339.20862,23.48328,30633.691};
-				angles[]={-0,5.9937224,-0};
+				angles[]={0,5.9937224,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2044,16 +2044,16 @@ class Mission
 		class Item37
 		{
 			dataType="Trigger";
-			position[]={3239.9639,0,14000.001};
+			position[]={3095.7229,49.560303,13168.263};
 			class Attributes
 			{
 				name="Tr1";
-				sizeA=1500;
-				sizeB=1500;
+				sizeA=1200;
+				sizeB=1200;
 			};
 			id=942;
 			type="EmptyDetectorAreaR50";
-			atlOffset=13.564678;
+			atlOffset=-3.8146973e-006;
 		};
 		class Item38
 		{

@@ -7,7 +7,6 @@
   default = -99999;
   texts[] = {""};
   };
-
   class Daytime
   {
     title = "Time of Day:";
@@ -16,7 +15,6 @@
 		default = 1;
 		function = "BIS_fnc_paramDaytime";
   };
-
   class play_faction
   {
     title = "Gegen welche Fraktion willst du spielen:";

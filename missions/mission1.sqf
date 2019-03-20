@@ -16,7 +16,7 @@ switch(_idx)do
   case 1:{
             MSOT_MISSION1_POS = [[4213.39,15048.5,0],200];
             MSOT_GENERATORS = [];
-            _script = {[2] execVM "missions\mission1.sqf";};
+            _script = {[3] execVM "missions\mission1.sqf";};
             {
               private _gen = "Land_dp_transformer_F" createVehicle (_x # 0);
               _gen setDir (_x # 1);
@@ -27,21 +27,29 @@ switch(_idx)do
             _marker_city = [(MSOT_MISSION1_POS select 0),"GENMARKER","ELLIPSE",[(MSOT_MISSION1_POS select 1),(MSOT_MISSION1_POS select 1)]] call MFUNC(usage,setMapMarker);
             ["MAINMARKER",(MSOT_MISSION1_POS select 0),[_marker_city,_script]] spawn MSOT_system_fnc_addMissionInfos;
             [0,"AUTOASSIGNED",(MSOT_MISSION1_POS select 0)] call MFUNC(tasks,setTask);
-            If((random 1) > 0.5)then
-            {
               _force_calc = [([] call MFUNC(system,getPlayerCount)),([] call MFUNC(usage,checkNight))] call MFUNC(system,getForcesCalc);
               [(MSOT_MISSION1_POS select 0),(MSOT_MISSION1_POS select 1),(_force_calc select 0),(_force_calc select 1),"MIXED_ALL","MIXED"] call MFUNC(creating,setUnits);
-              _script = {[(_this select 1)] call MFUNC(system,setTargetBehavior);sleep 1;};
+              _script = {
+                         [(_this select 1)] call MFUNC(system,setTargetBehavior);sleep 1;
+                         If((random 1) > 0.5)then{[(MSOT_MISSION1_POS select 0),1100,["CAR","TRUCK"],"PATROL"] call MSOT_creating_fnc_setConvoy;};
+                        };
               _triggername = ["DETECTED",(MSOT_MISSION1_POS select 0),((MSOT_MISSION1_POS select 1) + 200)] call MFUNC(system,setTrigger);
               ["MAINTRIGGER",(MSOT_MISSION1_POS select 0),[_triggername,_script,0,false]] call MFUNC(system,addMissionInfos);
-            };
-              _script = {[[MSOT_GENERATORS,"GenSound",4,(MSOT_MISSION1_POS select 1)],"scripts\playSound.sqf"] remoteExec ["execVM",([0,-2] select isDedicated)];};
+              _script = {
+                          [[MSOT_GENERATORS,"GenSound",4,(MSOT_MISSION1_POS select 1)],"scripts\playSound.sqf"] remoteExec ["execVM",([0,-2] select isDedicated)];
+
+                        };
               _triggername = ["ACTIVATE",(MSOT_MISSION1_POS select 0),(MSOT_MISSION1_POS select 1)] call MFUNC(system,setTrigger);
               ["MAINTRIGGER",(MSOT_MISSION1_POS select 0),[_triggername,_script,0,false]] call MFUNC(system,addMissionInfos);
 
 
          };
   case 2:{
+
+
+         };
+  case 3:{};
+  case 4:{
             [[[3239.96,14000,0],1500],"scripts\switchLights.sqf"] remoteExec ["execVM",0];
             [0,"SUCCEEDED"] call MFUNC(tasks,setTask);
             {
@@ -55,9 +63,9 @@ switch(_idx)do
                       [[3162.63,13188.6,0.00548553],3.2601],
                       [[3071.54,13163.3,0.0460472],244.067]
                      ];
-                     
+
          };
-  case 3:{
+  case 5:{
 
 
          };

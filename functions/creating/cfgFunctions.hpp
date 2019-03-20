@@ -13,6 +13,9 @@ class TAGADD
        class setFSeffect {
 				 								   description = "Set Smoke/Fire to Objects";
 			 									 };
+			 class setInHouseReforces {
+				 													description = "Create Units/Groups in Houses in a specific Range!";
+			 													};
 			 class setArtillery {
 				 										description = "Creates Artillery Fire";
 			 										};
