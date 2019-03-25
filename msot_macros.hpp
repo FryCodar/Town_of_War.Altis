@@ -63,6 +63,7 @@
 
 #define ARR_ADDVAR(arr1,var1) arr1 pushBack var1
 #define ARR_ADDARR(arr1,arr2) arr1 append arr2
+#define ARR_ADDUNIVAR(arr1,var1) arr1 pushBackUnique var1
 #define ARR_MINARR(arr1,arr2) arr1 - arr2
 #define ARR_MINIDX(arr1,num1) arr1 deleteAt num1
 #define ARR_SET(arr1,num1,inarr1) arr1 set [num1,inarr1]

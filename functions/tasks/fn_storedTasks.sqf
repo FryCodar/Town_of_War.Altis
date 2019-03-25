@@ -20,31 +20,31 @@ switch(_idx)do
 
          };
    case 1:{
-            _task_name = "";
+            _task_name = "TASK2";
 
-            _task_description_long = "";
+            _task_description_long = (localize "STR_task_Linfo2");
 
-            _task_description_forHUD = "";
+            _task_description_forHUD = (localize "STR_task_Sinfo2");
 
-            _task_Type  = "target";
+            _task_Type  = "destroy";
           };
    case 2:{
-            _task_name = "";
+            _task_name = "TASK3";
 
-            _task_description_long = "";
+            _task_description_long = (localize "STR_task_Linfo3");
 
-            _task_description_forHUD = "";
+            _task_description_forHUD = (localize "STR_task_Sinfo3");
 
-            _task_Type  = "";
+            _task_Type  = "destroy";
           };
    case 3:{
-            _task_name = "";
+            _task_name = "TASK4";
 
-            _task_description_long = "";
+            _task_description_long = (localize "STR_task_Linfo4");
 
-            _task_description_forHUD = "T";
+            _task_description_forHUD = (localize "STR_task_Sinfo4");
 
-            _task_Type  = "kill";
+            _task_Type  = "destroy";
           };
    case 4:{
             _task_name = "";

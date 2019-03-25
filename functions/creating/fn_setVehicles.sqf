@@ -1,7 +1,7 @@
 If(isMultiplayer)then{if(hasInterface) exitWith{};};
 #include "msot_components.hpp"
 /* --------------------------------------------------------------------------------------------------------------
-Function: MSOT_creating_fnc_setUnits
+Function: MSOT_creating_fnc_setVehicles
 
 Description: Creates defined Vehicles on Battlefield.
 
@@ -35,7 +35,7 @@ Parameters: [POSITION,RADIUS,NUMBER VEHICLES,INDEX,LOCATION,(NIGHTMODE),(BEHAVIO
 Returns: [ARRAY with Names of all created Vehicles]
 
 Examples:
-            _isStored = [(getMarkerPos "start"), 200,5, "CAR","AREA"] call MSOT_creating_fnc_setUnits;
+            _isStored = [(getMarkerPos "start"), 200,5, "CAR","AREA"] call MSOT_creating_fnc_setVehicle;
 
 Author: Fry
 

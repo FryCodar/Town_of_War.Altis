@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1028;
+		nextID=1077;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=105;
+		nextID=147;
 	};
 	class Camera
 	{
-		pos[]={4329.7158,1349.5895,15282.327};
-		dir[]={-0.084260672,-0.058494516,0.99475265};
-		up[]={-0.0049386197,0.99828249,0.05830479};
-		aside[]={0.9964608,-1.5659316e-007,0.084405027};
+		pos[]={3957.1106,179.20706,14132.402};
+		dir[]={-0.36719361,-0.27750087,-0.88783735};
+		up[]={-0.10607459,0.96070766,-0.25647333};
+		aside[]={-0.92413217,-9.3365088e-008,0.38220656};
 	};
 };
 binarizationWanted=0;
@@ -72,13 +72,15 @@ addons[]=
 	"A3_Boat_F_Gamma_Boat_Civil_01",
 	"A3_Structures_F_Naval_Piers",
 	"A3_Structures_F_Heli_Ind_Machines",
-	"ace_explosives"
+	"ace_explosives",
+	"A3_Characters_F_Common",
+	"A3_Static_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=33;
 		class Item0
 		{
 			className="A3_Boat_F_Jets";
@@ -303,6 +305,13 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item32
+		{
+			className="A3_Static_F";
+			name="Arma 3 Alpha - Turrets";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 class DynamicSimulation
@@ -400,7 +409,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=74;
+		items=77;
 		class Item0
 		{
 			dataType="Object";
@@ -2044,16 +2053,16 @@ class Mission
 		class Item37
 		{
 			dataType="Trigger";
-			position[]={3095.7229,49.560303,13168.263};
+			position[]={3089.291,48.968872,13172.961};
 			class Attributes
 			{
 				name="Tr1";
-				sizeA=1200;
-				sizeB=1200;
+				sizeA=130;
+				sizeB=130;
 			};
 			id=942;
 			type="EmptyDetectorAreaR50";
-			atlOffset=-3.8146973e-006;
+			atlOffset=3.8146973e-006;
 		};
 		class Item38
 		{
@@ -2346,7 +2355,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3089.5229,49.675289,13176.559};
+				position[]={3089.5415,49.641735,13176.655};
 				angles[]={0.15084518,0.24596891,0.0013372133};
 			};
 			side="Empty";
@@ -2356,7 +2365,6 @@ class Mission
 			};
 			id=981;
 			type="Land_ToiletBox_F";
-			atlOffset=0.018829346;
 		};
 		class Item55
 		{
@@ -2685,8 +2693,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={333.28918,22.555683,30610.012};
-						angles[]={0,2.8476818,0};
+						position[]={333.38376,22.554405,30614.119};
+						angles[]={0,2.7498002,0};
 					};
 					side="West";
 					flags=7;
@@ -2699,9 +2707,8 @@ class Mission
 						isPlayer=1;
 						isPlayable=1;
 					};
-					id=1018;
+					id=1059;
 					type="B_officer_F";
-					atlOffset=0.0012779236;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2750,11 +2757,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={330.24231,22.554874,30609.066};
-						angles[]={0,2.9535539,0};
+						position[]={334.92099,22.554401,30618.578};
+						angles[]={0,2.7498002,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.79993224;
@@ -2763,9 +2770,9 @@ class Mission
 						description="Schütze";
 						isPlayable=1;
 					};
-					id=1019;
+					id=1060;
 					type="B_Soldier_F";
-					atlOffset=0.00046730042;
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2814,11 +2821,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={329.47351,22.554783,30611.508};
-						angles[]={0,2.9367197,0};
+						position[]={332.48328,22.554401,30617.242};
+						angles[]={0,2.7498002,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.79993224;
@@ -2827,9 +2834,9 @@ class Mission
 						description="Grenadier";
 						isPlayable=1;
 					};
-					id=1020;
+					id=1061;
 					type="B_Soldier_GL_F";
-					atlOffset=0.00037765503;
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2878,11 +2885,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={332.46936,22.554478,30612.432};
-						angles[]={0,2.8969734,0};
+						position[]={330.07254,22.554401,30615.859};
+						angles[]={0,2.7498002,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.79993224;
@@ -2891,9 +2898,9 @@ class Mission
 						description="MG Schütze";
 						isPlayable=1;
 					};
-					id=1021;
+					id=1062;
 					type="B_soldier_AR_F";
-					atlOffset=7.2479248e-005;
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2942,20 +2949,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={335.52722,22.555241,30611.512};
-						angles[]={0,2.7838686,0};
+						position[]={332.68863,22.554401,30619.719};
+						angles[]={0,2.7292993,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						name="S5";
 						description="Panzerabwehr";
 						isPlayable=1;
 					};
-					id=1022;
+					id=1063;
 					type="B_soldier_AT_F";
-					atlOffset=0.0008354187;
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3004,11 +3011,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={334.8324,22.554691,30613.434};
-						angles[]={0,2.8750484,0};
+						position[]={330.37756,22.554401,30618.162};
+						angles[]={0,2.7292993,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.79993224;
@@ -3017,9 +3024,9 @@ class Mission
 						description="Scharfschütze";
 						isPlayable=1;
 					};
-					id=1023;
+					id=1064;
 					type="B_soldier_M_F";
-					atlOffset=0.00028610229;
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3068,11 +3075,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={336.58289,22.554554,30614.162};
-						angles[]={0,2.8840196,0};
+						position[]={327.99875,22.554401,30617.152};
+						angles[]={0,2.7292993,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.80332088;
@@ -3080,9 +3087,9 @@ class Mission
 						description="Sani";
 						isPlayable=1;
 					};
-					id=1024;
+					id=1065;
 					type="B_medic_F";
-					atlOffset=0.00014877319;
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3131,11 +3138,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={337.25769,22.554405,30612.477};
-						angles[]={0,2.7755716,0};
+						position[]={327.91617,22.554401,30614.889};
+						angles[]={0,2.7292993,0};
 					};
 					side="West";
-					flags=5;
+					flags=1;
 					class Attributes
 					{
 						skill=0.80332088;
@@ -3143,8 +3150,9 @@ class Mission
 						description="Sprengmeister";
 						isPlayable=1;
 					};
-					id=1025;
+					id=1066;
 					type="B_soldier_exp_F";
+					atlOffset=208.52296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3192,8 +3200,87 @@ class Mission
 			class Attributes
 			{
 			};
-			id=1017;
-			atlOffset=0.0012779236;
+			id=1058;
+		};
+		class Item74
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3152.4751,46.628456,13140.175};
+						angles[]={6.255795,2.51054,0.0048213955};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=1074;
+					type="O_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1074;
+						item1=1073;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1072;
+		};
+		class Item75
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3152.4697,47.758968,13140.094};
+				angles[]={6.255795,2.51054,0.0048213955};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=1073;
+			type="O_HMG_01_A_F";
+		};
+		class Item76
+		{
+			dataType="Trigger";
+			position[]={3590.7329,3.9373684,13608.472};
+			class Attributes
+			{
+				name="Tr2";
+				sizeA=450;
+				sizeB=450;
+			};
+			id=1075;
+			type="EmptyDetectorAreaR250";
 		};
 	};
 };

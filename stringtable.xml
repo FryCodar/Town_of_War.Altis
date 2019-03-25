@@ -10,5 +10,41 @@
 			<Original>Schalten Sie die Stromversorgung ab!</Original>
 			<German>Schalten Sie die Stromversorgung ab!</German>
 		</Key>
+    <Key ID="STR_task_Linfo2">
+			<Original>In der Stadt befinden sich mehrere Flugabwehrpanzer, versuchen Sie diese auszuschalten um eine mögliche Evakuierung durch Lutlandeeinheiten zu ermöglichen. Seien Sie vorsichtig!</Original>
+			<German>In der Stadt befinden sich mehrere Flugabwehrpanzer, versuchen Sie diese auszuschalten um eine mögliche Evakuierung durch Lutlandeeinheiten zu ermöglichen. Seien Sie vorsichtig!</German>
+		</Key>
+    <Key ID="STR_task_Sinfo2">
+			<Original>Schalten Sie die Flugabwehr aus!</Original>
+			<German>Schalten Sie die Flugabwehr aus!</German>
+		</Key>
+    <Key ID="STR_task_Linfo3">
+			<Original>Der Feind hat ein Waffen- und Munitionsdepot in dem rot markierten Bereich angelegt, worüber sich seine Truppen versorgen. Suchen und sprengen Sie die Kiste!</Original>
+			<German>Der Feind hat ein Waffen- und Munitionsdepot in dem rot markierten Bereich angelegt, worüber sich seine Truppen versorgen. Suchen und sprengen Sie die Kiste!</German>
+		</Key>
+    <Key ID="STR_task_Sinfo3">
+			<Original>Zerstören Sie das Waffendepot!</Original>
+			<German>Zerstören Sie das Waffendepot!</German>
+		</Key>
+    <Key ID="STR_task_Linfo4">
+			<Original>In der Nähe der Basis des Offiziers befindet sich ein Funktturm. Dieser dient zur Koordinierung eigener Truppen sowie das Rufen von Verstärkung. In Ihrem Interesse, schalten Sie ihn aus!</Original>
+			<German>In der Nähe der Basis des Offiziers befindet sich ein Funktturm. Dieser dient zur Koordinierung eigener Truppen sowie das Rufen von Verstärkung. In Ihrem Interesse, schalten Sie ihn aus!</German>
+		</Key>
+    <Key ID="STR_task_Sinfo4">
+			<Original>Zerstören Sie den Funkturm!</Original>
+			<German>Zerstören Sie den Funkturm!</German>
+		</Key>
+    <Key ID="STR_Info_TXT1">
+			<Original>Sie haben eine AA ausgeschalten!</Original>
+			<German>Sie haben eine AA ausgeschalten!</German>
+		</Key>
+    <Key ID="STR_Info_TXT2">
+			<Original>Sie haben das Waffendepot zerstört!</Original>
+			<German>Sie haben das Waffendepot zerstört!</German>
+		</Key>
+    <Key ID="STR_Info_TXT3">
+			<Original>Sie haben Funkturm zerstört!</Original>
+			<German>Sie haben Funkturm zerstört!</German>
+		</Key>
 	</Package>
 </Project>

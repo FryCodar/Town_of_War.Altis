@@ -23,30 +23,15 @@ params ["_obj","_caller","_idx","_xtra"];
             hint "Script 1 begins";
             //_____________________________________________________________________________________________________________________________
            //  _modules = [Car1,true] call MSOT_creating_fnc_setFSeffect;
-           //_datas = [(missionNamespace getVariable [STRVAR_DO(acm_main_pos),[]]), 1000] call MSOT_acm_fnc_getPlayerZone;
+           //_datas = [] call MSOT_acm_fnc_getPlayerZone;
+           //hint str _datas;
+           //copyToClipboard str _datas;
            //_marker_name = [((missionNamespace getVariable [STRVAR_DO(acm_main_pos),[]]) select 0),"Tester","ELLIPSE",[1000,1000]] call MSOT_usage_fnc_setMapMarker;
-           [1] execVM "missions\mission1.sqf";
+           hint str ([(position player),200,MSOT_ENEMY_SIDE] call MFUNC(acm,getEnemyInZone));
           };
    case 3:{
             //ZWEITER TESTBEREICH
             hint "Script 2 begins";
-            private _arr = [];
-            private _main_arr = [];
-            private _nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
-                             21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,
-                             41,42,43,44,45,46,47,48,49];
-
-            private _s_nums = [1,2,3,4,5,6,7,8,9,0];
-
-            While{count _arr < 6}do
-            {
-              _arr pushBackUnique (selectRandom _nums);
-              sleep 1;
-            };
-            _main_arr pushBack _arr;
-            _main_arr pushBack (selectRandom _s_nums);
-            hint str _main_arr;
-            copyToClipboard str _main_arr;
 
 
 
