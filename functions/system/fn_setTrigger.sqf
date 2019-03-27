@@ -58,7 +58,7 @@ switch(_idx)do
                     };
   case "CONTROLLED2":{
                         _exp_arr = [
-                                    "this && {('Man' countType thisList) < (missionNamespace getVariable ['msot_control_counter',4])}",
+                                    "this && {('Man' countType thisList) <= (missionNamespace getVariable ['msot_control_counter',5])}",
                                     "nul = ['MAINTRIGGER',thisTrigger] spawn MSOT_system_fnc_manageMissionCheck",
                                     ""
                                    ];

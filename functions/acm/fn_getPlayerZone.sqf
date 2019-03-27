@@ -40,7 +40,7 @@ F_LOOP(_i,0,((count _grp_list) - 1))
   {
     If((count _search_pos) > 0 && {_search_radius > 0})then
     {
-      {If(alive _x && {(_x distance2D _search_pos) <= _search_radius})then{_data_list pushBack [(position _x),(getDir _x)];};}forEach _units_in_grp;
+      {If(alive _x && {(_x distance2D _search_pos) >= _search_radius})then{_data_list pushBack [(position _x),(getDir _x)];};}forEach _units_in_grp;
     }else{{If(alive _x)then{_data_list pushBack [(position _x),(getDir _x)];};}forEach _units_in_grp;};
   };
   If(count _data_list > 0)then
@@ -58,7 +58,7 @@ F_LOOP(_i,0,((count _grp_list) - 1))
     }forEach _data_list;
     _average_pos = [(round(_all_x / _count_num)),(round(_all_y / _count_num)),0];
     {_dist = (round(_x distance2D _average_pos)); If(_dist > _average_radius)then{_average_radius = _dist;};}forEach _units_in_grp;
-    _output pushBack [_average_pos,_average_radius,(round(_all_dir / _count_num))];
+    If((_average_pos distance2D _search_pos) >= _search_radius)then{_output pushBack [_average_pos,_average_radius,(round(_all_dir / _count_num))];};
   };
   sleep 0.04;
 };
