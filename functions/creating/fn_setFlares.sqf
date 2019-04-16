@@ -18,22 +18,22 @@ Returns: Nothing
 
 Examples:
 
-          _grps = [(getMarkerPos "Town"),150,""] call MSOT_creating_fnc_setFlares;
+          _grps = [(getMarkerPos "Town"),150,""] spawn MSOT_creating_fnc_setFlares;
 
 Author: Fry
 
 ----------------------------------------------------------------------------------------------------------------- */
 private ["_i","_flare_pos","_flare"];
-params ["_fl_pos","_fl_radius",["_fl_script",""]];
+params ["_fl_pos","_fl_radius",["_fl_time",30]["_fl_script",""]];
 If(isClass(configfile >> "CfgMods" >> "ace"))then
 {
-  private _flares_num = (round(random 20))
+  private _flares_num = (round(random 20));
   If(_flares_num < 10)then{_flares_num = 10;};
   F_LOOP(_i,1,_flares_num)
   {
     _flare_pos = _fl_pos getPos [(round(random _fl_radius)),(random 360)];
     _flare = "ACE_40mm_Flare_white" createVehicle [(_flare_pos # 0),(_flare_pos # 1),((_flare_pos # 2) + 200)];
-    _timer = (round(random 30));
+    _timer = (round(random _fl_time));
     If(_timer < 15)then{_timer = 15};
     sleep _timer;
   };
@@ -44,5 +44,5 @@ If(isClass(configfile >> "CfgMods" >> "ace"))then
                     If(count _fl_script > 0)then{[] spawn (compile _fl_script);};
                   };
   };
-}else{hint "FAILURE: ACE MOD REQUIRED!";}
+}else{hint "FAILURE: ACE MOD REQUIRED!";};
 true

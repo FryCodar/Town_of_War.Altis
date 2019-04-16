@@ -18,7 +18,7 @@ Examples:
 Author: Fry
 
 ----------------------------------------------------------------------------------------------------------------- */
-private ["_i","_found_grp","_units_in_grp","_vec_list","_data_list","_count_num","_average_pos","_average_radius","_all_x","_all_y","_all_dir","_dist"];
+private ["_i","_found_grp","_units_in_grp","_vec_list","_data_list","_fill_list","_count_num","_average_pos","_average_radius","_all_x","_all_y","_all_dir","_dist"];
 params [["_search_pos",[]],["_search_radius",0]];
 
 private _output = [];
@@ -32,6 +32,7 @@ F_LOOP(_i,0,((count _grp_list) - 1))
 {
   _vec_list = [];
   _data_list = [];
+  _fill _list = [];
   _found_grp = (_grp_list select _i);
   _units_in_grp = (units _found_grp);
   {If(!(isNull (objectParent _x)))then{If(!((objectParent _x) isKindOf "Air"))then{_vec_list pushBackUnique (objectParent _x);_units_in_grp = _units_in_grp - [_x];}else{_units_in_grp = _units_in_grp - [_x];};};}forEach (units _found_grp);
@@ -58,7 +59,15 @@ F_LOOP(_i,0,((count _grp_list) - 1))
     }forEach _data_list;
     _average_pos = [(round(_all_x / _count_num)),(round(_all_y / _count_num)),0];
     {_dist = (round(_x distance2D _average_pos)); If(_dist > _average_radius)then{_average_radius = _dist;};}forEach _units_in_grp;
-    If((_average_pos distance2D _search_pos) >= _search_radius)then{_output pushBack [_average_pos,_average_radius,(round(_all_dir / _count_num))];};
+    If(count _search_pos > 0 && _search_radius > 0)then
+    {
+      If((_average_pos distance2D _search_pos) >= _search_radius)then
+      {
+        _output pushBack [_found_grp,[_average_pos,_average_radius,(round(_all_dir / _count_num))]];
+      };
+    }else{
+            _output pushBack [_found_grp,[_average_pos,_average_radius,(round(_all_dir / _count_num))]];
+         };
   };
   sleep 0.04;
 };

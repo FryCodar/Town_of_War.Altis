@@ -33,21 +33,7 @@ params ["_obj","_caller","_idx","_xtra"];
             //ZWEITER TESTBEREICH
             hint "Script 2 begins";
             //"F_40mm_White","Flare_82mm_AMOS_White","ACE_40mm_Flare_white"
-            _posit = (position player);
 
-            _flare_num = (round(random 20));
-            If(_flare_num < 10)then{_flare_num = 10;};
-            hint str _flare_num;
-            sleep 2;
-            F_LOOP(_i,1,_flare_num)
-            {
-              _flare_pos = _posit getPos [(round(random 200)),(random 360)];
-              _flare = "ACE_40mm_Flare_white" createVehicle [(_flare_pos # 0),(_flare_pos # 1),((_flare_pos # 2) + 200)];
-              _timer = (random 30);
-              hint str _timer;
-              If(_timer < 15)then{_timer = 15;};
-              sleep _timer;
-            };
 
           };
    case 4:{
@@ -94,7 +80,7 @@ _main_arr pushBack _arr;
 _main_arr pushBack (selectRandom _s_nums);
 hint str _main_arr;
 copyToClipboard str _main_arr;
-
-
+[_this,"HOSTAGE"] call MSOT_zeusen_fnc_addZeusTask;
+[_this,"DOCUMENTS"] call MSOT_zeusen_fnc_addZeusTask;
 
 */

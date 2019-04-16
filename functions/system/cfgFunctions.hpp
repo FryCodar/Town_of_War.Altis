@@ -22,9 +22,12 @@ class TAGADD
 			 class doMissionCheck {
 				 											description = "Framework for Missions";
 			 											};
-			 class getForcesCalc {
-				 										 description = "Calculated number of enemies";
-			 										 };
+			class getForcesCalc {
+										 				description = "Calculated number of enemies";
+										 			};
+			class getClientAction {
+															description = "AddAction Framework";
+													  };
 			 class getInfoArray {
 														description = "Search SystemInfos in Arrays";
 													};
